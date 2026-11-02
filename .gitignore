@@ -1,0 +1,3 @@
+*.fasl
+*.core
+.vscode/

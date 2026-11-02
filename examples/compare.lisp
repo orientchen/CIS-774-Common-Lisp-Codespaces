@@ -1,0 +1,5 @@
+(defun compare-numbers (x y)
+  (cond ((> x y) "x greater than y")
+        ((< x y) "x less than y")
+        (t "x equal to y")))
+(format t "~A~%" (compare-numbers 1 2))

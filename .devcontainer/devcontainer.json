@@ -1,0 +1,6 @@
+{
+  "name": "CIS 774 Common Lisp (SBCL)",
+  "build": {"dockerfile": "Dockerfile"},
+  "customizations": {"vscode": {"extensions": ["qingpeng.common-lisp"]}},
+  "postCreateCommand": "sbcl --version"
+}

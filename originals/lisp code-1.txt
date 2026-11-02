@@ -1,0 +1,29 @@
+(car '(A B C))
+(car '((A B) C D)
+(car 'A)
+
+(cdr '(A B C))
+(cdr '((A B C) D (E F)))
+
+(cons 'A '())
+(cons 'A '(B C))
+(cons '() '(A B))  
+(cons '(A B) '(C D))
+
+(eq 'A 'A)
+(eq 'A 'B) 
+(eq 'A '(A B))
+(eq '(A B) '(A B))
+(equal '(A B) '(A B))
+
+(listp '(X Y))
+(listp 'X)   
+(listp '())
+
+(null '(A B))
+(null '())
+(null 'A)
+(null '(()))
+
+(member 'B '(A B C))
+(member 'B '(A C D E))
