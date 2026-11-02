@@ -24,18 +24,39 @@ Historical sources: [SBCL — History and Copyright](https://www.sbcl.org/histor
    sbcl --version
    ```
 
-5. Run an example:
+5. Optionally verify the setup with `sbcl --script examples/first.lisp` (Hello World). Then follow the lecture order below.
 
-   ```bash
-   sbcl --script examples/first.lisp
-   sbcl --script examples/square.lisp
-   sbcl --script examples/compare.lisp
-   sbcl --script examples/factorial-demo.lisp
-   sbcl --script examples/hypotenuse-demo.lisp
-   sbcl --script examples/my-member.lisp
-   sbcl --script examples/pi-parameter.lisp
-   sbcl --script examples/list-operations.lisp
-   ```
+## Examples in lecture order
+
+These commands follow *Lecture_Lisp_edited (1).pptx* (Introduction to Lisp, 34 slides). Run them from the repository root.
+
+| Slides | Topic | Command |
+| --- | --- | --- |
+| 6–11 | Function notation and arithmetic | Try expressions interactively in `sbcl` |
+| 12–13 | Defining functions | `sbcl --script examples/square.lisp` |
+| 14 | Functions with multiple parameters | `sbcl --script examples/hypotenuse-demo.lisp` |
+| 15 | Binding names to values | `sbcl --script examples/pi-parameter.lisp` |
+| 16 | Output functions | `sbcl --script examples/first.lisp` |
+| 17–18 | Predicates and Boolean values | Try expressions interactively in `sbcl` |
+| 19–20 | Recursion and `if` | `sbcl --script examples/factorial-demo.lisp` |
+| 21–22 | Multiple selection with `cond` | `sbcl --script examples/compare.lisp` |
+| 23–33 | List operations and predicates | `sbcl --script examples/list-operations.lisp` |
+| 34 | Recursive list membership | `sbcl --script examples/my-member.lisp` |
+
+Run the eight script examples in slide order:
+
+```bash
+sbcl --script examples/square.lisp
+sbcl --script examples/hypotenuse-demo.lisp
+sbcl --script examples/pi-parameter.lisp
+sbcl --script examples/first.lisp
+sbcl --script examples/factorial-demo.lisp
+sbcl --script examples/compare.lisp
+sbcl --script examples/list-operations.lisp
+sbcl --script examples/my-member.lisp
+```
+
+**Note:** `first.lisp` may also be run first as a quick setup test, even though output functions appear on slide 16.
 
 Or run all examples from the repository root:
 
@@ -74,7 +95,9 @@ To load function definitions interactively:
 
 ## Lecture slide references
 
-The attached *Lisp in AI* slide deck mentions `tree-traversal.lisp`, `tiny-expert.lisp`, `graph-neighbors.lisp`, `symbolic-expression.lisp`, and `tiny-genetic.lisp`. Those source files were **not among the uploaded Lisp files**, so they are not included or reconstructed here. Add them when available.
+The introductory lecture is `notes/Lecture_Lisp_edited (1).pptx`, and the example order above follows its slides.
+
+The supplementary *Lisp in AI* slide deck mentions `tree-traversal.lisp`, `tiny-expert.lisp`, `graph-neighbors.lisp`, `symbolic-expression.lisp`, and `tiny-genetic.lisp`. Those source files were **not among the uploaded Lisp files**, so they are not included or reconstructed here. Add them when available.
 
 ## Notes for instructors
 
