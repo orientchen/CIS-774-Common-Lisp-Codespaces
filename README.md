@@ -2,6 +2,17 @@
 
 This repository provides an SBCL (Steel Bank Common Lisp) environment in GitHub Codespaces for classroom examples. **No local Lisp installation is needed.**
 
+## Why is it called Steel Bank Common Lisp?
+
+The name **Steel Bank Common Lisp (SBCL)** honors the history of **Carnegie Mellon University (CMU)**, where its predecessor, CMU Common Lisp (CMUCL), was developed:
+
+- **Steel** refers to **Andrew Carnegie**, whose fortune came from the steel industry.
+- **Bank** refers to **Andrew Mellon**, whose fortune came from banking.
+
+SBCL was forked from CMUCL in 1999 by **William Newman**. We also recognize **Guy L. Steele Jr.** for his important contributions to the development and standardization of Common Lisp, including *Common Lisp the Language*. Although his surname resembles “Steel,” **the SBCL name does not refer to him**.
+
+Historical sources: [SBCL — History and Copyright](https://www.sbcl.org/history.html); [Computer History Museum — Common Lisp family](https://softwarepreservation.computerhistory.org/LISP/common_lisp_family.html).
+
 ## Start a Codespace
 
 1. Open the GitHub repository.
