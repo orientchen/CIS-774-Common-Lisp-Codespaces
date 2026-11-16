@@ -79,6 +79,10 @@ To load function definitions interactively:
 
 **Note:** A file containing only `defun` definitions may print nothing when run with `--script`. Use the REPL or the `-demo.lisp` files to see output.
 
+## Lisp in AI lecture
+
+See [AI examples](ai-examples/README.md) for the eight examples accompanying the Lisp in AI lecture, including recursive symbolic differentiation in `ai-examples/derivative.lisp`.
+
 ## Files
 
 - `examples/`: Runnable examples and demos.
@@ -97,7 +101,7 @@ To load function definitions interactively:
 
 The introductory lecture is `notes/Lecture_Lisp_edited (1).pptx`, and the example order above follows its slides.
 
-The supplementary *Lisp in AI* slide deck mentions `tree-traversal.lisp`, `tiny-expert.lisp`, `graph-neighbors.lisp`, `symbolic-expression.lisp`, and `tiny-genetic.lisp`. Those source files were **not among the uploaded Lisp files**, so they are not included or reconstructed here. Add them when available.
+The supplementary *Lisp in AI* lecture examples are documented in [ai-examples/README.md](ai-examples/README.md).
 
 ## Notes for instructors
 
