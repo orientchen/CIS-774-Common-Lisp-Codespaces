@@ -83,9 +83,14 @@ To load function definitions interactively:
 
 See [AI examples](ai-examples/README.md) for the eight examples accompanying the Lisp in AI lecture, including recursive symbolic differentiation in `ai-examples/derivative.lisp`.
 
+## Lisp practice assignment
+
+See [Lisp Practice Assignment](assignments/Lisp-Practice-Assignment.md) for the tree traversal, directed graph, and symbolic differentiation exercises based on the AI examples.
+
 ## Files
 
 - `examples/`: Runnable examples and demos.
+- `assignments/`: Lisp practice assignment based on the AI examples.
 - `originals/`: Original uploaded source files, unchanged, including duplicate versions.
 - `notes/`: Uploaded Windows installation instructions and lecture slides.
 - `.devcontainer/`: Ubuntu-based Codespaces image with SBCL installed.
