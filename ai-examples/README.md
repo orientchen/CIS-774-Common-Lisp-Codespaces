@@ -22,7 +22,7 @@ Run each example using `sbcl --script` from the **repository root**.
 | 9 | `graph-representation.lisp` | Directed graph and neighbors | `sbcl --script ai-examples/graph-representation.lisp` |
 | 11 | `graph-dfs.lisp` | Depth-first search for a path | `sbcl --script ai-examples/graph-dfs.lisp` |
 | 13 | `symbolic-expression.lisp` | Lists as mathematical expressions | `sbcl --script ai-examples/symbolic-expression.lisp` |
-| 15 | `symbolic-differentiation.lisp` | Simplified product-rule example | `sbcl --script ai-examples/symbolic-differentiation.lisp` |
+| 15 | `derivative.lisp` | Recursive symbolic differentiation (addition and product rules) | `sbcl --script ai-examples/derivative.lisp` |
 | 17 | `rule-based-chatbot.lisp` | Simple rule-based responses | `sbcl --script ai-examples/rule-based-chatbot.lisp` |
 
 Slides 1–2, 4, 6, 8, 10, 12, 14, 16, 18–19 introduce concepts, show diagrams, or summarize applications; they do not need separate code files.
@@ -37,7 +37,7 @@ Slides 1–2, 4, 6, 8, 10, 12, 14, 16, 18–19 introduce concepts, show diagrams
 | `graph-representation.lisp` | `(B C)` |
 | `graph-dfs.lisp` | `(B C)` from loading the graph file, then `(A B D)` |
 | `symbolic-expression.lisp` | `+`, `(* X X)`, `(* 3 X)` |
-| `symbolic-differentiation.lisp` | `(+ (* 1 X) (* X 1))` |
+| `derivative.lisp` | Defines `derivative`; run in the REPL to evaluate expressions |
 | `rule-based-chatbot.lisp` | `"Hello! How can I help you?"` then `"Goodbye!"` |
 
 `print` in SBCL may display leading blank lines before results; this is normal.
@@ -46,7 +46,7 @@ Slides 1–2, 4, 6, 8, 10, 12, 14, 16, 18–19 introduce concepts, show diagrams
 
 - **DFS dependency:** `graph-dfs.lisp` loads `graph-representation.lisp` automatically. Run it from the repository root so the relative load path resolves.
 - **Expert system:** `mortal-p` checks for a matching `human` fact. This demonstrates the specific rule from the slide, not a general-purpose inference engine.
-- **Symbolic differentiation:** `differentiate-product` demonstrates the product-rule output for `(* x x)`. It is not a general derivative function and does not simplify its result to `(* 2 x)`.
+- **Symbolic differentiation:** `derivative` recursively handles numbers, the differentiation variable, addition, and multiplication. Other expression forms return `unknown`; results are not simplified.
 - **Tree traversal:** This is a new runnable companion for slide 3. The other seven examples follow the code displayed in the lecture, with minor formatting and standalone-execution adjustments.
 - **Chatbot:** This example compares complete input strings; it is not a general natural-language understanding system.
 
@@ -65,14 +65,12 @@ Then load and call an example:
 (classify-animal t nil)
 ```
 
+For symbolic differentiation, use:
+
+```lisp
+(load "ai-examples/derivative.lisp")
+(derivative '(* x x) 'x)
+```
+
 To reload changes, run the same `load` expression again. Exit with `(quit)`.
 
-## For instructors: integrate into the existing repository
-
-Copy the entire `ai-examples/` directory to the root of `CIS-774-Common-Lisp-Codespaces`. **Keep the existing root `README.md` and `examples/` directory unchanged.** Add a link to this file in the root README:
-
-```markdown
-## Lisp in AI lecture
-
-See [AI examples](ai-examples/README.md) for the eight runnable programs that accompany the Lisp in AI lecture.
-```
